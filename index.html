@@ -1,0 +1,57 @@
+﻿<!DOCTYPE HTML>
+<html manifest="offlinedatabase.manifest">
+   <head>
+   	  <title>APP com Phonegap</title>
+      <link rel="stylesheet" href="jquery.mobile.structure-1.3.1.min"/>
+	  <script src="jquery-1.6.3.min.js"></script>
+	  <script src="jquery.mobile-1.3.1.js"></script>
+	  <link rel="stylesheet" href="jquery.mobile-1.3.1.css"/>
+      <script type="text/javascript" src="offlinedatabaseJS.js" ></script>
+
+   </head>
+   <body onload="onInit()">
+   <div data-role="page" id="home">
+       
+         <div data-role="header">
+      <h3>Pré-Matrícula</h3>
+	  </div>
+	  <div data-role="content">
+      <ul  id="itemData" style="cursor:pointer;">
+      </ul>
+	  <h3 align='center'>Preencha os seus dados para Matrícula</h3>
+      <form name="itemForm">
+		<label for="id">Id:</label><input type="text" name="id" id="id" size=2 disabled="true"/>
+		<label for="nome">Nome:</label><input type="text" name="nome" id="nome" size=10/>
+		<label for="endereco">Endereço:</label><input type="text" name="endereco" id="endereco" size=3 />
+		<label for="email">E-mail:</label><input type="text" name="email" id="email" size=3 />
+		<label for="curso">Curso:</label>
+               <select name="curso" id="curso" data-mini="true">
+                  <option value="Sistemas de Internet">Sistemas de Internet</option>
+                  <option value="Sistemas de Informação">Sistemas de Informação</option>
+                  <option value="Negócios Imobiliários">Negócios Imobiliários</option>
+                  <option value="Matemática">Matemática</option>
+               </select>
+			   <div data-role="fieldcontain">
+               <label for="campus">Campus:</label>
+               <select name="campus" id="campus">
+                  <option value="Araquari">Araquari</option>
+                  <option value="Camboriu">Camboriu</option>
+                  <option value="Chapecó">Chapecó</option>
+                  <option value="Rio do Sul">Rio do Sul</option>
+               </select>
+            </div><br>
+		<br>
+		<div class="ui-body ui-body-b">
+            <fieldset class="ui-grid-a">
+		<input type="button" name="create" value="Create" onclick="onCreate()" />
+		<input type="button" name="update" value="Update" onclick="onUpdate()" />
+		<input type="button" name="delete" value="Delete" onclick="onDelete()" />
+      </div>
+	  </div>
+	  </form>
+	  </div>
+	  </div>
+	  <h4>Status:</h4>
+      <div id="status"></div>
+   </body>
+</html>
